@@ -41,21 +41,6 @@ Built on Next.js, Puppeteer, Cheerio, and Google's official `amphtml-validator`,
 
 ---
 
-## 📊 Benchmark Results Across 10 Web Environments
-
-| Website / Test URL | Engine / Technology | Initial Status | Final Status | Validation Error Count | Result |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **Kebayang.com** | Custom Web Engine | **FAIL** | **PASS** | **0** | ✨ 100% Valid AMP |
-| **Cabsyuk.com** | Angular SPA | **FAIL** (151 errors) | **PASS** | **0** | ✨ 100% Valid AMP |
-| **Hacker News** | Static / Lisp | **FAIL** (3 errors) | **PASS** | **0** | ✨ 100% Valid AMP |
-| **Medium.com** | Node / React | **PASS** | **PASS** | **0** | ✨ 100% Valid AMP |
-| **Astro.build** | Astro SSG | **FAIL** (6 errors) | **PASS** | **0** | ✨ 100% Valid AMP |
-| **Wix.com** | Wix Drag-and-Drop | **FAIL** (133 errors) | **PASS** | **0** | ✨ 100% Valid AMP |
-| **Detik.com** | Portal News | **FAIL** (28 errors) | **PASS** | **0** | ✨ 100% Valid AMP |
-| **159.223.73.115** | IP / HTTPS Site | **FAIL** (22 errors) | **PASS** | **0** | ✨ 100% Valid AMP |
-| **WordPress.org** | PHP / Gutenberg | **FAIL** | **PASS (HTML)** | 3 | HTML 100% Valid (3 minor CSS warnings) |
-| **PHP.net** | Vanilla PHP | **FAIL** | **PASS (HTML)** | 6 | HTML 100% Valid (6 minor CSS warnings) |
-
 ---
 
 ## ⚠️ Current Limitations & AMP Trade-offs

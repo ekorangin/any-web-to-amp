@@ -1,0 +1,20 @@
+{
+  "name": "ampier",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "amphtml-validator": "^1.0.35",
+    "cheerio": "^1.0.0",
+    "csso": "^5.0.5",
+    "lucide-react": "^0.435.0",
+    "next": "^14.2.5",
+    "puppeteer": "^23.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

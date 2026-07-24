@@ -1,0 +1,25 @@
+# Dependencies
+/node_modules
+/.pnpm-store
+
+# Next.js build output
+/.next/
+/out/
+
+# Production build
+/build
+
+# Logs & Environment
+/*.log
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Antigravity / Agent Scratch
+/scratch
+/.gemini
+
+# OS generated files
+.DS_Store
+Thumbs.db

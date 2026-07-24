@@ -6,23 +6,23 @@ Built on Next.js, Puppeteer, Cheerio, and Google's official `amphtml-validator`,
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 1. 🚀 Headless DOM Hydration (Puppeteer Engine)
+### 1. Headless DOM Hydration (Puppeteer Engine)
 * **Single-Page Application (SPA) Support**: Renders client-side dynamic JavaScript (React, Angular, Vue, Wix, WordPress, Detik, etc.) to capture the fully hydrated DOM.
 * **Computed Geometry Extraction**: Evaluates actual mobile viewport dimensions (`naturalWidth`/`naturalHeight` or rendered dimensions) to prevent Cumulative Layout Shift (CLS).
 
-### 2. 🔄 Deterministic AMP Transformations
+### 2. Deterministic AMP Transformations
 * **Smart Image Resolution**: Converts `<img>` tags to `<amp-img>` with responsive layouts. Automatically resolves lazy-loaded images (`data-src`, `data-original`, `data-lazy-src`).
 * **Form & Endpoint Routing**: Converts `<form>` elements to `amp-form`, automatically setting `target="_top"` and routing `POST` actions to `action-xhr` while enforcing absolute HTTPS URLs for `GET` forms.
 * **Media & Container Components**: Replaces `<picture>`, `<iframe>`, `<video>`, and `<audio>` with native `<amp-iframe>`, `<amp-video>`, and `<amp-audio>` tags.
 * **Custom Element Rewriting**: Rewrites custom framework tags (e.g. `<app-root>`, `<router-outlet>`, `<app-home>`) to standard `<div>` containers while preserving inner content and CSS classes.
 
-### 3. 📱 Automatic Navigation-to-`<amp-sidebar>` Transformer
+### 3. Automatic Navigation-to-`<amp-sidebar>` Transformer
 * **Dropdown & Hamburger Conversion**: Automatically detects site navigation (`<nav>`, `.navbar-nav`, `.mobile-menu`) and constructs a native, hardware-accelerated `<amp-sidebar id="ampier-sidebar">`.
 * **Native Action Binding**: Binds hamburger toggle buttons to AMP's native tap action: `on="tap:ampier-sidebar.toggle"`.
 
-### 4. 🛡️ Self-Healing Auto-Correction Pipeline
+### 4. Self-Healing Auto-Correction Pipeline
 * **Multi-Pass Validation**: Runs Google's official `amphtml-validator` and uses diagnostic feedback to programmatically auto-correct remaining edge-case errors across multiple iterations:
   * Converts disallowed or unrecognized tags to generic `<div>` containers.
   * Strips illegal or tag-specific attribute violations (e.g., `href` on `<span>`, `src` on `<div>`).
@@ -30,10 +30,10 @@ Built on Next.js, Puppeteer, Cheerio, and Google's official `amphtml-validator`,
   * Safely truncates oversized CSS at valid selector boundaries.
   * Supplies missing `width` and `height` dimension fallbacks (`300x200` for images, `600x400` for iframes).
 
-### 5. 🧼 Hydrated AMP Runtime Scrubber (`i-amphtml-*`)
+### 5. Hydrated AMP Runtime Scrubber (`i-amphtml-*`)
 * **Existing AMP & IP Site Support**: Strips internal runtime classes (such as `i-amphtml-element`, `i-amphtml-layout-fixed`, `i-amphtml-fill-content`) and runtime CSS rules injected by browser hydration when converting pages that already use AMP or IP address HTTPS sites (`https://159.223.73.115/`).
 
-### 6. 📊 A/B Testing & CRO Optimization
+### 6.  A/B Testing & CRO Optimization
 * **Analytics Preservation**: Auto-detects Google Analytics 4 (`G-XXXXXXX`) or Google Tag Manager (`GTM-XXXXXXX`) tracking IDs and injects valid `<amp-analytics>` components.
 * **Lead Conversion Feedback**: Auto-injects `<div submit-success>` and `<div submit-error>` templates using `amp-mustache` so forms never leave users hanging.
 * **Performance Scorecard**: Calculates original document size vs. AMP size in real-time and displays % size savings.
@@ -43,7 +43,7 @@ Built on Next.js, Puppeteer, Cheerio, and Google's official `amphtml-validator`,
 
 ---
 
-## ⚠️ Current Limitations & AMP Trade-offs
+## Current Limitations & AMP Trade-offs
 
 1. **Custom Client-Side JavaScript**: AMP strictly prohibits arbitrary custom `<script>` tags (e.g., custom jQuery plugins, raw JS popups). AMPier strips non-compliant scripts while capturing the rendered DOM state and leveraging built-in AMP components (`<amp-sidebar>`, `<amp-carousel>`, `<amp-accordion>`).
 2. **75KB CSS Limit**: Per Google AMP specifications, `<style amp-custom>` must not exceed 75,000 bytes. AMPier purges heavy inline base64 font/image data URLs, flattens `@layer`/`@container` rules, minifies CSS via CSSO, and safely truncates styles if the limit is exceeded.
@@ -51,7 +51,7 @@ Built on Next.js, Puppeteer, Cheerio, and Google's official `amphtml-validator`,
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 * **Node.js**: v18.0.0 or higher
@@ -115,6 +115,6 @@ You can use AMPier as a standalone microservice or integrate it into your backen
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
